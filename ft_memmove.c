@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/01 21:58:13 by mmoussou          #+#    #+#             */
+/*   Updated: 2023/11/01 22:10:36 by mmoussou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void	*memmove(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	char	*ptr1;
 	char	*ptr2;
@@ -11,7 +23,7 @@ void	*memmove(void *dst, const void *src, size_t n)
 	{
 		ptr1 = (char *)dst;
 		ptr2 = (char *)src;
-		if (s1 > s2)
+		if (ptr1 > ptr2)
 			while (n--)
 				ptr1[n] = ptr2[n];
 		else

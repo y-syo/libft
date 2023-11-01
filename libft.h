@@ -6,7 +6,7 @@
 /*   By: mmoussou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 23:06:24 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/10/31 19:11:33 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/01 22:04:51 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,27 +27,32 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 
-int		ft_memset(int c);
-int		ft_bzero(int c);
-int		ft_memcpy(int c);
-int		ft_memmove(int c);
-int		ft_memchr(void);
-int		ft_memcmp(void);
+void	*ft_memset(void *s, int c, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t n, size_t elsize);
 
-int		ft_strlcpy(int c);
-int		ft_strlcat(int c);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-int		ft_strchr(int c);
-int		ft_strrchr(int c);
-int		ft_strncmp(int c);
-int		ft_strnstr(int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(char *s1, char *s2, unsigned int n);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strdup(char *src);
 
-int		ft_atoi(int c);
+int		ft_atoi(const char *str);
 
 /* strs */
-int		ft_strlen(char const	*s);
+int		ft_strlen(char const *s);
 char	*ft_strjoin(int size, char **strs, char *sep);
 char	*ft_itoa(int n);
+char	**ft_split(char *str, char *charset);
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

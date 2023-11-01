@@ -6,7 +6,7 @@
 #    By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 16:34:08 by mmoussou          #+#    #+#              #
-#    Updated: 2023/11/01 20:05:43 by yosyo            ###   ########.fr        #
+#    Updated: 2023/11/01 20:50:28 by mmoussou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,36 @@ NAME = libft.a
 
 HEADER = .
 
-SRCS = 		 ./ft_strtrim.c \
-			 ./ft_substr.c \
-			 ./ft_isalpha.c \
-			 ./ft_strlen.c \
-			 ./ft_strjoin.c \
+# find -type f -name "*.c" | sed "s/\.\///g" | xargs -Iname echo "`printf '\t\t\t'`" name "\\"
+SRCS =			 ft_isdigit.c \
+			 ft_strchr.c \
+			 ft_memchr.c \
+			 ft_isalnum.c \
+			 ft_strtrim.c \
+			 ft_calloc.c \
+			 ft_substr.c \
+			 ft_isprint.c \
+			 ft_strdup.c \
+			 ft_itoa.c \
+			 ft_memcpy.c \
+			 ft_strnstr.c \
+			 ft_tolower.c \
+			 ft_isalpha.c \
+			 ft_strlcpy.c \
+			 ft_strlen.c \
+			 ft_atoi.c \
+			 ft_memset.c \
+			 ft_memcmp.c \
+			 ft_isascii.c \
+			 ft_strjoin.c \
+			 ft_strncmp.c \
+			 ft_strrchr.c \
+			 ft_split.c \
+			 ft_memmove.c \
+			 ft_bzero.c \
+			 ft_strlcat.c \
+			 ft_toupper.c \
+
 
 OBJS = $(SRCS:.c=.o)
 

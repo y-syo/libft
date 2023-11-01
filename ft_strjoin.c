@@ -6,11 +6,11 @@
 /*   By: mmoussou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 07:57:52 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/10/31 19:10:46 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/01 22:03:53 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	seplen(char *str, int size)
 {
