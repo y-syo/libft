@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:01:50 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/02 14:03:04 by yosyo            ###   ########.fr       */
+/*   Updated: 2023/11/02 15:49:31 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,28 @@ static int	malloc_size(int n)
 
 char	*ft_itoa(int n)
 {
+	int		len;
 	char	*r;
-	int		l;
 	int		i;
-	int		o;
 
-	o = 1;
+	i = 0;
 	if (n == -2147483648)
 		return (itoa_min_int());
-	l = malloc_size(n);
-	
+	len = malloc_size(n);
+	r = malloc(len * sizeof(char));
+	if (!r)
+		return (NULL);
+	if (n < 0)
+	{
+		r[0] = '-';
+		n *= -1;
+		i++;
+	}
+	while (i < len)
+	{
+		r[len - i] = (n % 10) + '0';
+		n /= 10;
+		i++;
+	}
 	return (r);
 }

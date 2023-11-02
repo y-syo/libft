@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:02:20 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/01 22:02:21 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/02 16:48:20 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(char *src)
 	int		i;
 
 	i = 0;
-	rst = malloc(sizeof(src) * (ft_strlen(src) + 1));
+	rst = malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (!rst)
 		return (NULL);
 	while (src[i])
@@ -26,5 +26,6 @@ char	*ft_strdup(char *src)
 		rst[i] = src[i];
 		i++;
 	}
+	rst[i] = 0;
 	return (rst);
 }
