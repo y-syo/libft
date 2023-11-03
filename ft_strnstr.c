@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 21:55:45 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/02 17:22:20 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/02 23:01:51 by yosyo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (!little || !len)
+	if (!little || !len || len > ft_strlen(big))
 		return ((char *)big);
 	while (i < len)
 	{

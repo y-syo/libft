@@ -6,7 +6,7 @@
 /*   By: mmoussou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 23:06:24 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/01 22:04:51 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/02 23:30:54 by yosyo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*ft_strdup(char *src);
 int		ft_atoi(const char *str);
 
 /* strs */
-int		ft_strlen(char const *s);
+size_t	ft_strlen(char const *s);
 char	*ft_strjoin(int size, char **strs, char *sep);
 char	*ft_itoa(int n);
 char	**ft_split(char *str, char *charset);
