@@ -6,84 +6,22 @@
 /*   By: mmoussou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 07:57:52 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/01 22:03:53 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/05 09:01:43 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	seplen(char *str, int size)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (sizeof(char) * (i * (size - 1)));
-}
-
-static char	*ft_strcat(char *dest, char *src)
-{
-	unsigned int	i;
-	unsigned int	dest_size;
-
-	i = 0;
-	while (dest[i])
-		i++;
-	dest_size = i;
-	i = 0;
-	while (src[i])
-	{
-		dest[dest_size + i] = src[i];
-		i++;
-	}
-	dest[dest_size + i] = '\0';
-	return (dest);
-}
-
-static int	malloc_size(int size, char **strs)
-{
-	int	i;
-	int	j;
-	int	rst;
-
-	i = 0;
-	rst = 0;
-	while (i < size)
-	{
-		j = 0;
-		while (strs[j])
-			j++;
-		rst += j;
-		i++;
-	}
-	return (sizeof(char) * (rst + i));
-}
-
-char	*ft_strjoin(int size, char **strs, char *sep)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*fstr;
 	int		i;
 
 	i = 0;
-	if (size == 0 || strs == NULL || sep == NULL)
-	{
-		fstr = malloc(sizeof(char));
-		if (fstr == NULL)
-			return (fstr);
-		fstr[0] = 0;
-		return (fstr);
-	}
-	fstr = malloc(malloc_size(size, strs) + seplen(sep, size) + sizeof(char));
-	if (fstr == NULL)
+	fstr = ft_calloc(sizeof(char), ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!fstr)
 		return (NULL);
-	*fstr = 0;
-	while (i < size)
-	{
-		ft_strcat(fstr, strs[i]);
-		if (i < size - 1)
-			ft_strcat(fstr, sep);
-		i++;
-	}
+	ft_strlcpy(fstr, s1, ft_strlen(s1) + 1);
+	ft_strlcat(fstr, s2, ft_strlen(s1) + ft_strlen(s2) + 1);
 	return (fstr);
 }

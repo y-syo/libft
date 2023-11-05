@@ -6,7 +6,7 @@
 /*   By: mmoussou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 23:06:24 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/02 23:30:54 by yosyo            ###   ########.fr       */
+/*   Updated: 2023/11/05 14:47:47 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strdup(char *src);
 
 int		ft_atoi(const char *str);
+char    *ft_itoa(int n);
 
 /* strs */
 size_t	ft_strlen(char const *s);
-char	*ft_strjoin(int size, char **strs, char *sep);
+char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_itoa(int n);
-char	**ft_split(char *str, char *charset);
+char	**ft_split(char *str, char ch);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 

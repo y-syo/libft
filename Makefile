@@ -6,7 +6,7 @@
 #    By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 16:34:08 by mmoussou          #+#    #+#              #
-#    Updated: 2023/11/02 23:35:22 by yosyo            ###   ########.fr        #
+#    Updated: 2023/11/05 14:48:36 by mmoussou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ SRCS =			 ft_isdigit.c \
 			 ft_bzero.c \
 			 ft_strlcat.c \
 			 ft_toupper.c \
+			 ft_itoa.c \
 
 
 OBJS = $(SRCS:.c=.o)
