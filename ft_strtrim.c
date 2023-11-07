@@ -6,46 +6,47 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:39:05 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/05 17:33:45 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:36:23 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 #include <stdio.h>
 
 static int	is_charset(char c, char const *set)
 {
 	size_t	i;
-	int		r;
 
 	i = -1;
-	r = 0;
 	while (set[++i])
 		if (c == set[i])
-			r = 1;
-	return (r);
+			return (1);
+	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
+	size_t	o;
+	int		i;
 	char	*r;
-	size_t	i;
-	size_t	l;
 
-	l = 0;
-	i = 0;
-	while (s1[i] && is_charset(s1[i], set))
-		i++;
-	while (s1[i + l])
-		l++;
-	while (is_charset(s1[i + l], set))
-		l--;
-	printf("%ld \n", l);
-	r = ft_calloc(sizeof(char), l);
+	if (!s1[0] || !set[0])
+		return ((char *)s1);
+	o = 0;
+	while (s1[o] && is_charset(s1[o], set))
+		o++;
+	i = ft_strlen(s1) - o - 1;
+	while (i > 0 && is_charset(s1[o + i], set))
+		i--;
+	if (!i)
+		return (malloc(0));
+	r = ft_calloc(sizeof(char), i + 2);
 	if (!r)
 		return (NULL);
-	while (--l)
-		r[l] = s1[i + l];
+	while (i + 1)
+	{
+		r[i] = s1[o + i];
+		i--;
+	}
 	return (r);
 }
