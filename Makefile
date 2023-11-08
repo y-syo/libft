@@ -6,7 +6,7 @@
 #    By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 16:34:08 by mmoussou          #+#    #+#              #
-#    Updated: 2023/11/07 16:10:15 by mmoussou         ###   ########.fr        #
+#    Updated: 2023/11/08 21:47:50 by mmoussou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,12 @@ SRCS =		ft_isdigit.c \
 			ft_putnbr_fd.c \
 
 BONUSSRCS = ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
 
 OBJS = $(SRCS:.c=.o)
 
