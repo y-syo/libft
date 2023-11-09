@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:39:05 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/08 23:19:35 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/09 16:06:33 by yosyo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	int		i;
 	char	*r;
 
-	if (!s1[0] || !set[0])
+	if (!s1 || !set)
 		return ((char *)s1);
 	o = 0;
 	while (s1[o] && is_charset(s1[o], set))
