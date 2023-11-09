@@ -6,7 +6,7 @@
 #    By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 16:34:08 by mmoussou          #+#    #+#              #
-#    Updated: 2023/11/08 21:47:50 by mmoussou         ###   ########.fr        #
+#    Updated: 2023/11/09 13:10:09 by yosyo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,8 @@ BONUSSRCS = ft_lstnew.c \
 			ft_lstadd_back.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c \
 
 OBJS = $(SRCS:.c=.o)
 
