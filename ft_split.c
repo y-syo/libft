@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:59:11 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/11 10:49:53 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/11 11:00:17 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,11 @@ static int	per_word_fill(char **result, char *str, char ch)
 		if (c != 0)
 		{
 			result[j] = ft_calloc(sizeof(char), c + 1);
-			if (result[j] == NULL)
+			if (result[j++] == NULL)
 				return (1);
-			j++;
 		}
-		i++;
+		if (str[i])
+			i++;
 	}
 	result[j] = NULL;
 	return (0);
