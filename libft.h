@@ -6,7 +6,7 @@
 /*   By: mmoussou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 23:06:24 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/09 15:49:28 by yosyo            ###   ########.fr       */
+/*   Updated: 2023/11/11 13:20:01 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_itoa(int n);
 size_t	ft_strlen(char const *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
-int		ft_strncmp(char *s1, char *s2, unsigned int n);
+int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strdup(char *src);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
@@ -58,7 +58,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 char	*ft_itoa(int n);
-char	**ft_split(char *str, char ch);
+char	**ft_split(const char *str, char ch);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 int		ft_toupper(int c);

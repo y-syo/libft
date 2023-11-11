@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:02:48 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/01 22:02:55 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/11 13:27:31 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dl;
 
-	if (!dst || !src)
-		return (0);
+	if (!size)
+		return (ft_strlen(src));
 	dl = ft_strlen(dst);
 	if (size <= dl)
 		return (size + ft_strlen(src));

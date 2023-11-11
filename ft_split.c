@@ -6,13 +6,13 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:59:11 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/11 11:37:00 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/11 13:20:49 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	word_counter(char *str, char ch)
+static int	word_counter(const char *str, char ch)
 {
 	int	i;
 	int	c;
@@ -37,7 +37,7 @@ static int	word_counter(char *str, char ch)
 	return (c);
 }
 
-static int	per_word_fill(char **result, char *str, char ch)
+static int	per_word_fill(char **result, const char *str, char ch)
 {
 	int	i;
 	int	j;
@@ -66,7 +66,7 @@ static int	per_word_fill(char **result, char *str, char ch)
 	return (0);
 }
 
-static void	ft_split_resolver(char **result, char *str, char ch)
+static void	ft_split_resolver(char **result, const char *str, char ch)
 {
 	int	i;
 	int	j;
@@ -95,7 +95,7 @@ static void	ft_split_resolver(char **result, char *str, char ch)
 	}
 }
 
-char	**ft_split(char *str, char c)
+char	**ft_split(const char *str, char c)
 {
 	char	**result;
 
