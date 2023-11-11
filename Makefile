@@ -6,7 +6,7 @@
 #    By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 16:34:08 by mmoussou          #+#    #+#              #
-#    Updated: 2023/11/11 10:49:38 by mmoussou         ###   ########.fr        #
+#    Updated: 2023/11/11 12:04:54 by mmoussou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,10 +80,6 @@ $(NAME): $(OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -I $(HEADER) $< -c -o $@
-
-so:
-		$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-			gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 clean:
 	rm -f $(OBJS) $(BONUSOBJS)

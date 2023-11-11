@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 21:55:45 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/10 17:06:05 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/11 12:00:46 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (!little || big == little)
+	if (!little || !little[0] || big == little)
 		return ((char *)big);
 	if (!len)
 		return (NULL);
