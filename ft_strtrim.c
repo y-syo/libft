@@ -6,11 +6,13 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:39:05 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/09 16:06:33 by yosyo            ###   ########.fr       */
+/*   Updated: 2023/11/10 17:14:01 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+#include <stdio.h>
 
 static int	is_charset(char c, char const *set)
 {
@@ -37,7 +39,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	i = ft_strlen(s1) - o - 1;
 	while (i > 0 && is_charset(s1[o + i], set))
 		i--;
-	if (!i)
+	if (o == ft_strlen(s1) - 1)
 		return (malloc(0));
 	r = ft_calloc(sizeof(char), i + 2);
 	if (!r)

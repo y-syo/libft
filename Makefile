@@ -6,7 +6,7 @@
 #    By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 16:34:08 by mmoussou          #+#    #+#              #
-#    Updated: 2023/11/09 13:10:09 by yosyo            ###   ########.fr        #
+#    Updated: 2023/11/11 10:49:38 by mmoussou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,10 +86,10 @@ so:
 			gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 clean:
-	rm $(OBJS) $(BONUSOBJS)
+	rm -f $(OBJS) $(BONUSOBJS)
 
 fclean: clean
-	rm $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
