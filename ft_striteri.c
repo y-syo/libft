@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:59:56 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/07 14:17:36 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/11 11:45:06 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	if (!s || !f)
 		return ;
 	i = 0;
-	while (s[i++])
-		f(i - 1, s + i - 1);
+	while (s[i])
+	{
+		f(i, s + i);
+		i++;
+	}
 }

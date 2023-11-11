@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:59:11 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/11 11:00:17 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/11 11:37:00 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,8 @@ static void	ft_split_resolver(char **result, char *str, char ch)
 		else if (str[i] != ch)
 		{
 			bool_w = 1;
-			result[j][wi++] = str[i];
+			result[j][wi] = str[i];
+			wi++;
 		}
 		i++;
 	}

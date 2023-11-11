@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:39:05 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/10 17:14:01 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/11 11:45:30 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,13 @@ static int	is_charset(char c, char const *set)
 {
 	size_t	i;
 
-	i = -1;
-	while (set[++i])
+	i = 0;
+	while (set[i])
+	{
 		if (c == set[i])
 			return (1);
+		i++;
+	}
 	return (0);
 }
 
