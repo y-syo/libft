@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:59:11 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/06 13:51:30 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/11 10:49:53 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ static int	per_word_fill(char **result, char *str, char ch)
 	int	j;
 	int	c;
 
-	i = -1;
+	i = 0;
 	j = 0;
-	while (str[++i])
+	while (str[i])
 	{
 		c = 0;
 		while (str[i] != ch && str[i])
@@ -60,6 +60,7 @@ static int	per_word_fill(char **result, char *str, char ch)
 				return (1);
 			j++;
 		}
+		i++;
 	}
 	result[j] = NULL;
 	return (0);
@@ -72,11 +73,11 @@ static void	ft_split_resolver(char **result, char *str, char ch)
 	int	wi;
 	int	bool_w;
 
-	i = -1;
+	i = 0;
 	j = 0;
 	wi = 0;
 	bool_w = 0;
-	while (str[++i])
+	while (str[i])
 	{
 		if (str[i] == ch && bool_w)
 		{
@@ -89,6 +90,7 @@ static void	ft_split_resolver(char **result, char *str, char ch)
 			bool_w = 1;
 			result[j][wi++] = str[i];
 		}
+		i++;
 	}
 }
 
@@ -96,7 +98,7 @@ char	**ft_split(char *str, char c)
 {
 	char	**result;
 
-	result = malloc(sizeof(char *) * (word_counter(str, c)));
+	result = malloc(sizeof(char *) * (word_counter(str, c) + 1));
 	if (result == NULL)
 		return (NULL);
 	if (per_word_fill(result, str, c))
