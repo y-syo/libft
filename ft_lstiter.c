@@ -6,7 +6,7 @@
 /*   By: yosyo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:49:19 by yosyo             #+#    #+#             */
-/*   Updated: 2023/11/09 12:51:08 by yosyo            ###   ########.fr       */
+/*   Updated: 2023/11/13 19:32:17 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst)
+	if (!lst || !f)
 		return ;
 	while (lst->next)
 	{

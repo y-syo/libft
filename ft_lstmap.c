@@ -6,7 +6,7 @@
 /*   By: yosyo <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 12:53:23 by yosyo             #+#    #+#             */
-/*   Updated: 2023/11/09 13:46:31 by yosyo            ###   ########.fr       */
+/*   Updated: 2023/11/13 19:33:20 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*tmp;
 
 	r = NULL;
-	while (lst)
+	while (lst && f && del)
 	{
 		tmp = ft_lstnew(f(lst->content));
 		if (!tmp)

@@ -6,11 +6,21 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:59:11 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/11 13:20:49 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/13 19:39:13 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	free_list(char **result, int j)
+{
+	while (j)
+	{
+		free(result[j]);
+		j--;
+	}
+	return (1);
+}
 
 static int	word_counter(const char *str, char ch)
 {
@@ -57,7 +67,7 @@ static int	per_word_fill(char **result, const char *str, char ch)
 		{
 			result[j] = ft_calloc(sizeof(char), c + 1);
 			if (result[j++] == NULL)
-				return (1);
+				return (free_list(result, j - 2));
 		}
 		if (str[i])
 			i++;

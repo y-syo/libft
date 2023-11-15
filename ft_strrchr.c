@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 21:57:57 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/09 15:50:37 by yosyo            ###   ########.fr       */
+/*   Updated: 2023/11/13 19:46:30 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	i = ft_strlen(s);
 	if (!c)
 		return (&((char *)s)[i]);

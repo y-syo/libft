@@ -6,13 +6,11 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:39:05 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/11 11:45:30 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/12 00:25:11 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include <stdio.h>
 
 static int	is_charset(char c, char const *set)
 {

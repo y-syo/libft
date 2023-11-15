@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 17:03:15 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/08 17:32:39 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/13 19:31:32 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 
 	tmp = *lst;
 	*lst = new;
-	if (!new)
+	if (!new || !lst)
 		return ;
 	while (new->next)
 		new = new->next;

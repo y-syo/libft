@@ -3,10 +3,10 @@
 #                                                         :::    ::::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lbouet   <>                               +#+  +:+       #+#         #
+#    By: lbouet   <@nix.os>                        +#+  +:+       #+#         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/31 16:34:08 by kiroussa          #+#    #+#              #
-#    Updated: 2023/11/11 23:46:55 by mmoussou         ###   ########.fr        #
+#    Created: 2023/10/31 16:34:08 by kroussar          #+#    #+#              #
+#    Updated: 2023/11/13 19:59:52 by mmoussou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -116,7 +116,24 @@ define THIS_PROJECT_SHOULD_BE_OUTSTANDING
 
 \033[0m
 endef
+
+define BONUS_BANNER
+\033[0;6;33m
+ (               (               )      )         (             (       *          
+ )\ )  *   )  (  )\ )     (   ( /(   ( /(         )\ )    *   ) )\ )  (  `         
+(()/(` )  /(  )\(()/(   ( )\  )\())  )\())    (  (()/(  ` )  /((()/(  )\))(   (    
+ /(_))( )(_))((_)/(_))  )((_)((_)\  ((_)\     )\  /(_))  ( )(_))/(_))((_)()\  )\   
+(_)) (_(_())    (_))   ((_)_   ((_)  _((_) _ ((_)(_))   (_(_())(_))  (_()((_)((_)  
+|_ _||_   _|    / __|   | _ ) / _ \ | \| || | | |/ __|  |_   _||_ _| |  \/  || __| 
+ | |   | |      \__ \   | _ \| (_) || .` || |_| |\__ \    | |   | |  | |\/| || _|  
+|___|  |_|      |___/   |___/ \___/ |_|\_| \___/ |___/    |_|  |___| |_|  |_||___| 
+\033[0m
+
+endef
+
 export THIS_PROJECT_SHOULD_BE_OUTSTANDING
+
+export BONUS_BANNER
 
 
 all: banner $(NAME)
@@ -124,18 +141,27 @@ all: banner $(NAME)
 banner:
 	@printf "$$THIS_PROJECT_SHOULD_BE_OUTSTANDING"
 
-bonus: $(OBJS) $(BONUSOBJS)	
-	ar -rcs $(NAME) $(OBJS) $(BONUSOBJS)
+bonus: banner $(OBJS) $(BONUSOBJS)
+	@printf "$$BONUS_BANNER"
+	@echo -n "\033[0m\n\n󱉟 Making library.\r"
+	@ar rcs $(NAME) $(OBJS) $(BONUSOBJS)
+	@sleep 0.2
+	@echo -n "󱉟 Making library..\r"
+	@sleep 0.2
+	@echo -n "󱉟 Making library...\r"
+	@sleep 0.2
+	@echo "󱉟 Library done !    "
+
 
 $(NAME): $(OBJS)
 	@echo -n "\033[0m\n\n󱉟 Making library.\r"
-	@ar -rcs $(NAME) $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
 	@sleep 0.2
-	@echo -n "\033[0m󱉟 Making library..\r"
+	@echo -n "󱉟 Making library..\r"
 	@sleep 0.2
-	@echo -n "\033[0m󱉟 Making library...\r"
+	@echo -n "󱉟 Making library...\r"
 	@sleep 0.2
-	@echo "\033[0m󱉟 Library done !    "
+	@echo "󱉟 Library done !    "
 
 %.o: %.c
 	$(eval COUNT += x)
@@ -172,4 +198,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all fclean clean re
+.PHONY: all fclean clean re bonus banner

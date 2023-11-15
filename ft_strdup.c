@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:02:20 by mmoussou          #+#    #+#             */
-/*   Updated: 2023/11/02 16:48:20 by mmoussou         ###   ########.fr       */
+/*   Updated: 2023/11/13 19:41:29 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(char *src)
 	int		i;
 
 	i = 0;
+	if (!src)
+		return (NULL);
 	rst = malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (!rst)
 		return (NULL);
