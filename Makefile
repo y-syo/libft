@@ -19,9 +19,11 @@ NAME = libft.a
 INCLUDE = include
 
 # find -type f -name "*.c" | sed "s/\.\///g" | xargs -Iname echo "`printf '\t\t\t'`" name "\\"
-SRCS =			src/io/ft_putstr_fd.c \
+SRCS =		src/io/ft_putstr_fd.c \
+			src/io/ft_printf.c \
 			src/io/ft_putendl_fd.c \
 			src/io/ft_putchar_fd.c \
+			src/io/ft_putuhex_fd.c \
 			src/io/ft_putnbr_fd.c \
 			src/char/ft_isalpha.c \
 			src/char/ft_isascii.c \
