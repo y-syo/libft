@@ -16,176 +16,114 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
-HEADER = .
+INCLUDE = include
 
 # find -type f -name "*.c" | sed "s/\.\///g" | xargs -Iname echo "`printf '\t\t\t'`" name "\\"
-SRCS =		ft_isdigit.c \
-			ft_strchr.c \
-			ft_memchr.c \
-			ft_isalnum.c \
-			ft_strtrim.c \
-			ft_calloc.c \
-			ft_substr.c \
-			ft_isprint.c \
-			ft_strdup.c \
-			ft_memcpy.c \
-			ft_strnstr.c \
-			ft_tolower.c \
-			ft_isalpha.c \
-			ft_strlcpy.c \
-			ft_strlen.c \
-			ft_atoi.c \
-			ft_memset.c \
-			ft_memcmp.c \
-			ft_isascii.c \
-			ft_strjoin.c \
-			ft_strncmp.c \
-			ft_strrchr.c \
-			ft_split.c \
-			ft_memmove.c \
-			ft_bzero.c \
-			ft_strlcat.c \
-			ft_toupper.c \
-			ft_itoa.c \
-			ft_strmapi.c \
-			ft_striteri.c \
-			ft_putchar_fd.c \
-			ft_putstr_fd.c \
-			ft_putendl_fd.c \
-			ft_putnbr_fd.c \
-
-BONUSSRCS = ft_lstnew.c \
-			ft_lstadd_front.c \
-			ft_lstsize.c \
-			ft_lstlast.c \
-			ft_lstadd_back.c \
-			ft_lstdelone.c \
-			ft_lstclear.c \
-			ft_lstiter.c \
-			ft_lstmap.c \
+SRCS =			src/io/ft_putstr_fd.c \
+			src/io/ft_putendl_fd.c \
+			src/io/ft_putchar_fd.c \
+			src/io/ft_putnbr_fd.c \
+			src/char/ft_isalpha.c \
+			src/char/ft_isascii.c \
+			src/char/ft_isdigit.c \
+			src/char/ft_isprint.c \
+			src/char/ft_isalnum.c \
+			src/linked_lists/ft_lstnew.c \
+			src/linked_lists/ft_lstdelone.c \
+			src/linked_lists/ft_lstclear.c \
+			src/linked_lists/ft_lstmap.c \
+			src/linked_lists/ft_lstiter.c \
+			src/linked_lists/ft_lstsize.c \
+			src/linked_lists/ft_lstlast.c \
+			src/linked_lists/ft_lstadd_back.c \
+			src/linked_lists/ft_lstadd_front.c \
+			src/mem/ft_memcmp.c \
+			src/mem/ft_memcpy.c \
+			src/mem/ft_calloc.c \
+			src/mem/ft_bzero.c \
+			src/mem/ft_memchr.c \
+			src/mem/ft_memset.c \
+			src/mem/ft_memmove.c \
+			src/str/ft_toupper.c \
+			src/str/ft_strlcpy.c \
+			src/str/ft_striteri.c \
+			src/str/ft_strnstr.c \
+			src/str/ft_strlcat.c \
+			src/str/ft_tolower.c \
+			src/str/ft_strtrim.c \
+			src/str/ft_strncmp.c \
+			src/str/ft_strlen.c \
+			src/str/ft_itoa.c \
+			src/str/ft_strdup.c \
+			src/str/ft_strchr.c \
+			src/str/ft_atoi.c \
+			src/str/ft_substr.c \
+			src/str/ft_strjoin.c \
+			src/str/ft_strmapi.c \
+			src/str/ft_split.c \
+			src/str/ft_strrchr.c \
 
 OBJS = $(SRCS:.c=.o)
 
-BONUSOBJS = $(BONUSSRCS:.c=.o)
-
 COUNT	:=
 
-define THIS_PROJECT_SHOULD_BE_OUTSTANDING
+define LIBFT_BANNER
 \033[0;34m
 
-                                                ██▓     ██▓ ▄▄▄▄     █████▒▄▄▄█████▓
-                                               ▓██▒    ▓██▒▓█████▄ ▓██   ▒ ▓  ██▒ ▓▒
-                                               ▒██░    ▒██▒▒██▒ ▄██▒████ ░ ▒ ▓██░ ▒░
-                                               ▒██░    ░██░▒██░█▀  ░▓█▒  ░ ░ ▓██▓ ░ 
-                                               ░██████▒░██░░▓█  ▀█▓░▒█░      ▒██▒ ░ 
-                                               ░ ▒░▓  ░░▓  ░▒▓███▀▒ ▒ ░      ▒ ░░   
-                                               ░ ░ ▒  ░ ▒ ░▒░▒   ░  ░          ░    
-                                                 ░ ░    ▒ ░ ░    ░  ░ ░      ░      
-                                                   ░  ░ ░   ░                       
-                                                               ░                                                  
 
-\033[0;5;32m
-                                                              ██
-                  ██                                        ██▒▒██                                       ██                    
-                ██▒▒██                                    ██▒▒▒▒░░██                                   ██▒▒██                  
-              ██▒▒▒▒░░██                                  ██▒▒░░░░██                                 ██▒▒▒▒░░██                
-              ██▒▒░░░░██                                ██▒▒░░░░    ██                               ██▒▒░░░░██                
-            ██▒▒░░░░    ██                              ██░░░░░░    ██                             ██▒▒░░░░    ██              
-            ██░░░░░░    ██                  ████████████░░░░░░        ████████████                 ██░░░░░░    ██              
-████████████░░░░░░        ████████████      ██▒▒▒▒▒▒▒▒░░░░██    ██            ▒▒██     ████████████░░░░░░        ████████████  
-██▒▒▒▒▒▒▒▒░░░░██    ██            ▒▒██        ██▒▒▒▒░░░░░░██    ██          ▒▒██       ██▒▒▒▒▒▒▒▒░░░░██    ██            ▒▒██  
-  ██▒▒▒▒░░░░░░██    ██          ▒▒██            ██░░░░░░  ██    ██        ▒▒██           ██▒▒▒▒░░░░░░██    ██          ▒▒██    
-    ██░░░░░░  ██    ██        ▒▒██                ██░░                  ▒▒██               ██░░░░░░  ██    ██        ▒▒██      
-      ██░░                  ▒▒██                    ██                ▒▒██                   ██░░                  ▒▒██        
-        ██                ▒▒██                      ██              ▒▒▒▒██                     ██                ▒▒██          
-        ██              ▒▒▒▒██                    ██              ▒▒▒▒▒▒▒▒██                   ██              ▒▒▒▒██          
-      ██              ▒▒▒▒▒▒▒▒██                  ██        ██████▒▒▒▒▒▒▒▒██                 ██              ▒▒▒▒▒▒▒▒██        
-      ██        ██████▒▒▒▒▒▒▒▒██                ██      ████      ████▒▒▒▒░░██               ██        ██████▒▒▒▒▒▒▒▒██        
-    ██      ████      ████▒▒▒▒░░██              ██    ██              ██░░░░██             ██      ████      ████▒▒▒▒░░██      
-    ██    ██              ██░░░░██              ██████                  ██████             ██    ██              ██░░░░██      
-    ██████                  ██████                                                         ██████                  ██████      
-
-\033[0;32m
-                _____ _____   _____ _   _  _____   _____ _   _ _____ _____ ___   _   _______ _____ _   _ _____               
-               |_   _|  _  | |_   _| | | ||  ___| |  _  | | | /  ___|_   _/ _ \ | \ | |  _  \_   _| \ | |  __ \              
-                 | | | | | |   | | | |_| || |__   | | | | | | \ `--.  | |/ /_\ \|  \| | | | | | | |  \| | |  \/              
-                 | | | | | |   | | |  _  ||  __|  | | | | | | |`--. \ | ||  _  || . ` | | | | | | | . ` | | __               
-                 | | \ \_/ /   | | | | | || |___  \ \_/ / |_| /\__/ / | || | | || |\  | |/ / _| |_| |\  | |_\ \              
-                 \_/  \___/    \_/ \_| |_/\____/   \___/ \___/\____/  \_/\_| |_/\_| \_/___/  \___/\_| \_/\____/              
+		  _____     _____  ______   ________  _________  
+		 |_   _|   |_   _||_   _ \ |_   __  ||  _   _  | 
+		   | |       | |    | |_) |  | |_ \_||_/ | | \_| 
+		   | |   _   | |    |  __'.  |  _|       | |     
+		  _| |__/ | _| |_  _| |__) |_| |_       _| |_    
+		 |________||_____||_______/|_____|     |_____|   
+                                                 
 
 
 \033[0m
 endef
 
-define BONUS_BANNER
-\033[0;6;33m
- (               (               )      )         (             (       *          
- )\ )  *   )  (  )\ )     (   ( /(   ( /(         )\ )    *   ) )\ )  (  `         
-(()/(` )  /(  )\(()/(   ( )\  )\())  )\())    (  (()/(  ` )  /((()/(  )\))(   (    
- /(_))( )(_))((_)/(_))  )((_)((_)\  ((_)\     )\  /(_))  ( )(_))/(_))((_)()\  )\   
-(_)) (_(_())    (_))   ((_)_   ((_)  _((_) _ ((_)(_))   (_(_())(_))  (_()((_)((_)  
-|_ _||_   _|    / __|   | _ ) / _ \ | \| || | | |/ __|  |_   _||_ _| |  \/  || __| 
- | |   | |      \__ \   | _ \| (_) || .` || |_| |\__ \    | |   | |  | |\/| || _|  
-|___|  |_|      |___/   |___/ \___/ |_|\_| \___/ |___/    |_|  |___| |_|  |_||___| 
-\033[0m
-
-endef
-
-export THIS_PROJECT_SHOULD_BE_OUTSTANDING
-
-export BONUS_BANNER
+export LIBFT_BANNER
 
 
 all: banner $(NAME)
 
 banner:
-	@printf "$$THIS_PROJECT_SHOULD_BE_OUTSTANDING"
-
-bonus: banner $(OBJS) $(BONUSOBJS)
-	@printf "$$BONUS_BANNER"
-	@echo -n "\033[0m\n\n󱉟 Making library.\r"
-	@ar rcs $(NAME) $(OBJS) $(BONUSOBJS)
-	@sleep 0.2
-	@echo -n "󱉟 Making library..\r"
-	@sleep 0.2
-	@echo -n "󱉟 Making library...\r"
-	@sleep 0.2
-	@echo "󱉟 Library done !    "
-
+	@printf "$$LIBFT_BANNER"
 
 $(NAME): $(OBJS)
-	@echo -n "\033[0m\n\n󱉟 Making library.\r"
+	@echo -n -e "\n\n󱉟 Making library.\r"
 	@ar rcs $(NAME) $(OBJS)
 	@sleep 0.2
-	@echo -n "󱉟 Making library..\r"
+	@echo -n -e "󱉟 Making library..\r"
 	@sleep 0.2
-	@echo -n "󱉟 Making library...\r"
+	@echo -n -e "󱉟 Making library...\r"
 	@sleep 0.2
 	@echo "󱉟 Library done !    "
 
 %.o: %.c
 	$(eval COUNT += x)
-	@echo -n "\033[107m\r󱌣 Compiling... : | "
+	@echo -n -e "\r󱌣 Compiling... : | "
 	@for i in $(SRCS); do \
-		echo -n ""; \
+		echo -n -e ""; \
 	done
-	@echo -n " | $<       \r"
-	@echo -n "󱌣 Compiling... : | "
+	@echo -n -e " | $<               \r"
+	@echo -n -e "󱌣 Compiling... : | "
 	@for j in $(COUNT); do \
 		echo -n ""; \
 	done
-	@$(CC) $(CFLAGS) -I $(HEADER) $< -c -o $@
+	@$(CC) $(CFLAGS) -I ./$(INCLUDE) $< -c -o $@
 
 clean:
 	@for i in $(OBJS) $(BONUSOBJS); do \
 		if test -f "$$i"; then \
 			rm -f $$i; \
 			sleep 0.02; \
-			echo -n " Cleaned "; \
-			echo -n "$$i   \r"; \
+			echo -n -e " Cleaned "; \
+			echo -n -e "$$i                        \r"; \
 		fi; \
 	done
-	@echo " Cleaned all objects !      "
+	@echo " Cleaned all objects !                     "
 	@sleep 0.1
 
 fclean: clean
@@ -198,4 +136,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all fclean clean re bonus banner
+.PHONY: all fclean clean re banner

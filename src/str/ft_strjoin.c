@@ -15,9 +15,7 @@
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*fstr;
-	int		i;
 
-	i = 0;
 	if (!s1)
 		s1 = "";
 	if (!s2)
