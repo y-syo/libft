@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angouleme.fr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 23:06:24 by mmoussou          #+#    #+#             */
-/*   Updated: 2024/01/11 18:58:22 by mmoussou         ###   ########.fr       */
+/*   Updated: 2024/01/11 23:42:48 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
-
-
 
 /* CHAR */
 
@@ -58,6 +56,9 @@ char	*ft_strdup(char *src);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strjoin_free(char *s1, char *s2);
+char	*ft_strjoin_free_s1(char *s1, const char *s2);
+char	*ft_strjoin_free_s2(const char *s1, char *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
@@ -78,7 +79,6 @@ int		ft_putnbr_fd(int n, int fd);
 int		ft_putuhex_fd(unsigned long long nbr, char *base, int fd);
 
 int		ft_printf(const char *str, ...);
-
 
 // ---------------- BONUS ---------------- //
 
