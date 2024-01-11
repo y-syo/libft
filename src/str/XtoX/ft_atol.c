@@ -6,15 +6,15 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:00:18 by mmoussou          #+#    #+#             */
-/*   Updated: 2024/01/11 23:48:48 by mmoussou         ###   ########.fr       */
+/*   Updated: 2024/01/12 00:53:30 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	ft_atol(const char *str)
+long long	ft_atol(const char *str)
 {
-	long	r;
+	long long	r;
 	int		i;
 	char	s;
 

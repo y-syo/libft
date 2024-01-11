@@ -6,7 +6,7 @@
 #    By: lbouet   <@nix.os>                        +#+  +:+       #+#         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 16:34:08 by kroussar          #+#    #+#              #
-#    Updated: 2024/01/11 18:58:45 by mmoussou         ###   ########.fr        #
+#    Updated: 2024/01/12 00:49:47 by mmoussou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,53 +19,55 @@ NAME = libft.a
 INCLUDE = include
 
 # find -type f -name "*.c" | sed "s/\.\///g" | xargs -Iname echo "`printf '\t\t\t'`" name "\\"
-SRCS =		src/io/ft_putstr_fd.c \
-			src/io/ft_printf.c \
-			src/io/ft_putendl_fd.c \
-			src/io/ft_putchar_fd.c \
-			src/io/ft_putuhex_fd.c \
-			src/io/ft_putnbr_fd.c \
-			src/char/ft_isalpha.c \
-			src/char/ft_isascii.c \
-			src/char/ft_isdigit.c \
-			src/char/ft_isprint.c \
-			src/char/ft_isalnum.c \
-			src/linked_lists/ft_lstnew.c \
-			src/linked_lists/ft_lstdelone.c \
-			src/linked_lists/ft_lstclear.c \
-			src/linked_lists/ft_lstmap.c \
-			src/linked_lists/ft_lstiter.c \
-			src/linked_lists/ft_lstsize.c \
-			src/linked_lists/ft_lstlast.c \
-			src/linked_lists/ft_lstadd_back.c \
-			src/linked_lists/ft_lstadd_front.c \
-			src/mem/ft_memcmp.c \
-			src/mem/ft_memcpy.c \
-			src/mem/ft_calloc.c \
-			src/mem/ft_bzero.c \
-			src/mem/ft_memchr.c \
-			src/mem/ft_memset.c \
-			src/mem/ft_memmove.c \
-			src/str/ft_toupper.c \
-			src/str/ft_strlcpy.c \
-			src/str/ft_striteri.c \
-			src/str/ft_strnstr.c \
-			src/str/ft_strlcat.c \
-			src/str/ft_tolower.c \
-			src/str/ft_strtrim.c \
-			src/str/ft_strncmp.c \
-			src/str/ft_strcmp.c \
-			src/str/ft_strlen.c \
-			src/str/ft_itoa.c \
-			src/str/ft_strdup.c \
-			src/str/ft_strchr.c \
-			src/str/ft_atoi.c \
-			src/str/ft_atol.c \
-			src/str/ft_substr.c \
-			src/str/ft_strjoin.c \
-			src/str/ft_strmapi.c \
-			src/str/ft_split.c \
-			src/str/ft_strrchr.c \
+SRCS = 		 src/io/get_next_line.c \
+			 src/io/ft_putnbr_fd.c \
+			 src/io/ft_putuhex_fd.c \
+			 src/io/ft_putendl_fd.c \
+			 src/io/ft_putstr_fd.c \
+			 src/io/ft_printf.c \
+			 src/io/ft_putchar_fd.c \
+			 src/mem/ft_memchr.c \
+			 src/mem/ft_calloc.c \
+			 src/mem/ft_memcpy.c \
+			 src/mem/ft_memset.c \
+			 src/mem/ft_memcmp.c \
+			 src/mem/ft_memmove.c \
+			 src/mem/ft_bzero.c \
+			 src/str/XtoX/ft_atol.c \
+			 src/str/XtoX/ft_itoa.c \
+			 src/str/XtoX/ft_atoi.c \
+			 src/str/XtoX/ft_ltoa.c \
+			 src/str/ft_strchr.c \
+			 src/str/ft_strtrim.c \
+			 src/str/ft_strcmp.c \
+			 src/str/ft_striteri.c \
+			 src/str/ft_strmapi.c \
+			 src/str/ft_substr.c \
+			 src/str/ft_strdup.c \
+			 src/str/ft_strnstr.c \
+			 src/str/ft_tolower.c \
+			 src/str/ft_strlcpy.c \
+			 src/str/ft_strlen.c \
+			 src/str/ft_strjoin.c \
+			 src/str/ft_strncmp.c \
+			 src/str/ft_strrchr.c \
+			 src/str/ft_split.c \
+			 src/str/ft_strlcat.c \
+			 src/str/ft_toupper.c \
+			 src/char/ft_isdigit.c \
+			 src/char/ft_isalnum.c \
+			 src/char/ft_isprint.c \
+			 src/char/ft_isalpha.c \
+			 src/char/ft_isascii.c \
+			 src/linked_lists/ft_lstmap.c \
+			 src/linked_lists/ft_lstnew.c \
+			 src/linked_lists/ft_lstclear.c \
+			 src/linked_lists/ft_lstsize.c \
+			 src/linked_lists/ft_lstadd_front.c \
+			 src/linked_lists/ft_lstadd_back.c \
+			 src/linked_lists/ft_lstiter.c \
+			 src/linked_lists/ft_lstlast.c \
+			 src/linked_lists/ft_lstdelone.c \
 
 OBJS = $(SRCS:.c=.o)
 

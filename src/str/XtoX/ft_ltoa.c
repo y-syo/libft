@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 12:45:53 by mmoussou          #+#    #+#             */
-/*   Updated: 2024/01/11 23:54:11 by mmoussou         ###   ########.fr       */
+/*   Updated: 2024/01/12 00:52:12 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,12 @@ static char	*itoa_rec(char *r, int n)
 	return (r);
 }
 
-char	*ft_ltoa(long n)
+char	*ft_ltoa(long long n)
 {
 	char	*r;
 
-	if (n == -9223372036854775808)
-		return (ft_strdup("-9223372036854775808"));
+	if (n == -9223372036854775807)
+		return (ft_strdup("-9223372036854775807"));
 	r = ft_calloc(sizeof(char), n_size(n) + 1);
 	if (!r)
 		return (NULL);
