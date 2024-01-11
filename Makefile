@@ -6,7 +6,7 @@
 #    By: lbouet   <@nix.os>                        +#+  +:+       #+#         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/31 16:34:08 by kroussar          #+#    #+#              #
-#    Updated: 2023/11/13 19:59:52 by mmoussou         ###   ########.fr        #
+#    Updated: 2024/01/11 18:58:45 by mmoussou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,11 +54,13 @@ SRCS =		src/io/ft_putstr_fd.c \
 			src/str/ft_tolower.c \
 			src/str/ft_strtrim.c \
 			src/str/ft_strncmp.c \
+			src/str/ft_strcmp.c \
 			src/str/ft_strlen.c \
 			src/str/ft_itoa.c \
 			src/str/ft_strdup.c \
 			src/str/ft_strchr.c \
 			src/str/ft_atoi.c \
+			src/str/ft_atol.c \
 			src/str/ft_substr.c \
 			src/str/ft_strjoin.c \
 			src/str/ft_strmapi.c \

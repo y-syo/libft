@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angouleme.fr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 23:06:24 by mmoussou          #+#    #+#             */
-/*   Updated: 2024/01/03 21:57:20 by mmoussou         ###   ########.fr       */
+/*   Updated: 2024/01/11 18:58:22 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void	*ft_calloc(size_t n, size_t elsize);
 /* INT & ARG */
 
 int		ft_atoi(const char *str);
+long	ft_atol(const char *str);
 char	*ft_itoa(int n);
 
 /* STRINGS */
@@ -50,6 +51,7 @@ char	*ft_itoa(int n);
 size_t	ft_strlen(char const *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strdup(char *src);
