@@ -6,7 +6,7 @@
 #    By: mmoussou <mmoussou@student.42angouleme.fr  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 07:21:18 by mmoussou          #+#    #+#              #
-#    Updated: 2024/01/23 18:09:27 by mmoussou         ###   ########.fr        #
+#    Updated: 2024/01/23 18:19:17 by mmoussou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -107,22 +107,22 @@ clear:
 all: clear $(NAME)
 
 %.o: %.c
-	@printf "\x1B[2K\r \x1B[1;32m[ 󱌣 ]\x1B[0m Compiling Objects... : $<"
+	@printf "\x1B[2K\r \x1B[1;32m[ 󱌣 ]\x1B[0m Compiling Libft Objects... : $<"
 	@$(CC) $(CFLAGS) -I$(INCLUDE) $< -c -o $@
 
 $(NAME): $(OBJS)
-	@printf "\x1B[2K\r \x1B[1;32m[ 󱌣 ]\x1B[0m Objects Compiled."
-	@printf "\n \x1B[1;33m[ 󱉟 ]\x1B[0m Creating Archive $(NAME)..."
+	@printf "\x1B[2K\r \x1B[1;32m[ 󱌣 ]\x1B[0m Libft Objects Compiled."
+	@printf "\n \x1B[1;33m[ 󱉟 ]\x1B[0m Creating Libft Archive..."
 	@ar rcs $(NAME) $(OBJS)
-	@printf "\x1B[2K\r \x1B[1;33m[ 󱉟 ]\x1B[0m Archive Created.\n"
+	@printf "\x1B[2K\r \x1B[1;33m[ 󱉟 ]\x1B[0m Libft Archive Created.\n"
 
 clean: clear
 	@rm -f $(OBJS)
-	@printf " \x1B[1;31m[  ]\x1B[0m Deleted Objects.\n"
+	@printf " \x1B[1;31m[  ]\x1B[0m Deleted Libft Objects.\n"
 
 fclean: clear clean
 	@rm -f $(NAME)
-	@printf " \x1B[1;31m[  ]\x1B[0m Deleted Archive.\n"
+	@printf " \x1B[1;31m[  ]\x1B[0m Deleted Libft Archive.\n"
 
 re: clear fclean all
 
