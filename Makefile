@@ -6,7 +6,7 @@
 #    By: mmoussou <mmoussou@student.42angouleme.fr  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 07:21:18 by mmoussou          #+#    #+#              #
-#    Updated: 2024/01/23 18:30:14 by mmoussou         ###   ########.fr        #
+#    Updated: 2024/01/23 18:47:38 by mmoussou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,10 +100,10 @@ define	LIBFT_BANNER
 endef
 export LIBFT_BANNER
 
+all: clear $(NAME)
+
 clear:
 	@printf "$$LIBFT_BANNER"
-
-all: clear $(NAME)
 
 %.o: %.c
 	@printf "\x1B[2K\r \x1B[1;32m[ 󱌣 ]\x1B[0m Compiling Libft Objects... : $<"
