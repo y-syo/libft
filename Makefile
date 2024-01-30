@@ -6,7 +6,7 @@
 #    By: mmoussou <mmoussou@student.42angouleme.fr  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 07:21:18 by mmoussou          #+#    #+#              #
-#    Updated: 2024/01/23 18:47:38 by mmoussou         ###   ########.fr        #
+#    Updated: 2024/01/30 01:08:08 by mmoussou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,9 @@ SRCS = 		 src/io/get_next_line.c \
 			 src/io/ft_putstr_fd.c \
 			 src/io/ft_printf.c \
 			 src/io/ft_putchar_fd.c \
+			 \
+			 src/int/ft_min.c \
+			 src/int/ft_max.c \
 			 \
 			 src/mem/ft_memchr.c \
 			 src/mem/ft_calloc.c \
@@ -115,11 +118,11 @@ $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
 	@printf "\x1B[2K\r \x1B[1;33m[ 󱉟 ]\x1B[0m Libft Archive Created.\n"
 
-clean: clear
+clean: 
 	@rm -f $(OBJS)
 	@printf " \x1B[1;31m[  ]\x1B[0m Deleted Libft Objects.\n"
 
-fclean: clear clean
+fclean: clean
 	@rm -f $(NAME)
 	@printf " \x1B[1;31m[  ]\x1B[0m Deleted Libft Archive.\n"
 
