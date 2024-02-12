@@ -6,7 +6,7 @@
 #    By: mmoussou <mmoussou@student.42angouleme.fr  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 07:21:18 by mmoussou          #+#    #+#              #
-#    Updated: 2024/02/05 14:15:23 by mmoussou         ###   ########.fr        #
+#    Updated: 2024/02/12 18:07:03 by mmoussou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,25 +89,8 @@ SRCS = 		 src/io/get_next_line.c \
 
 OBJS = $(SRCS:.c=.o)
 
-define	LIBFT_BANNER
-\033[1;35m
-----------------------------------------------------------------
-                 __   __   __      ____   __   
-                |  | |__| |  |--. |   _| |  |_ 
-                |  | |  | |  _  | |   _| |   _|
-                |__| |__| |_____| |__|   |____|
-                       
-----------------------------------------------------------------
 
-
-\033[0m
-endef
-export LIBFT_BANNER
-
-all: clear $(NAME)
-
-clear:
-	@printf "$$LIBFT_BANNER"
+all: $(NAME)
 
 %.o: %.c
 	@printf "\x1B[2K\r \x1B[1;32m[ 󱌣 ]\x1B[0m Compiling Libft Objects... : $<"
@@ -127,6 +110,6 @@ fclean: clean
 	@rm -f $(NAME)
 	@printf " \x1B[1;31m[  ]\x1B[0m Deleted Libft Archive.\n"
 
-re: clear fclean all
+re: fclean all
 
 .PHONY: all server client clean fclean re
