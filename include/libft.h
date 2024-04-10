@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angouleme.fr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 23:06:24 by mmoussou          #+#    #+#             */
-/*   Updated: 2024/02/25 22:52:33 by mmoussou         ###   ########.fr       */
+/*   Updated: 2024/04/10 10:58:22 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 
 int			ft_min(int a, int b);
 int			ft_max(int a, int b);
+int			ft_abs(int n);
 
 /* CHAR */
 
@@ -88,8 +89,6 @@ int			ft_putuhex_fd(unsigned long long nbr, char *base, int fd);
 
 int			ft_printf(const char *str, ...);
 int			ft_printf_fd(int fd, const char *str, ...);
-
-char		*get_next_line(int fd);
 
 // ---------------- LINKED LISTS ---------------- //
 

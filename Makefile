@@ -6,7 +6,7 @@
 #    By: mmoussou <mmoussou@student.42angouleme.fr  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/22 07:21:18 by mmoussou          #+#    #+#              #
-#    Updated: 2024/02/26 03:08:27 by mmoussou         ###   ########.fr        #
+#    Updated: 2024/04/10 10:58:10 by mmoussou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,7 @@ INCLUDE = ./include
 NAME = libft.a
 
 #find -type f -name "*.c" | sed "s/\.\///g" | xargs -Iname echo "`printf '\t\t\t'`" name "\\"
-SRCS = 		 src/io/get_next_line.c \
-			 src/io/ft_putnbr_fd.c \
+SRCS = 		 src/io/ft_putnbr_fd.c \
 			 src/io/ft_putuhex_fd.c \
 			 src/io/ft_putendl_fd.c \
 			 src/io/ft_putstr_fd.c \
@@ -32,6 +31,7 @@ SRCS = 		 src/io/get_next_line.c \
 			 \
 			 src/int/ft_min.c \
 			 src/int/ft_max.c \
+			 src/int/ft_abs.c \
 			 \
 			 src/mem/ft_memchr.c \
 			 src/mem/ft_calloc.c \
