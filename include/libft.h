@@ -6,7 +6,7 @@
 /*   By: mmoussou <mmoussou@student.42angouleme.fr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 23:06:24 by mmoussou          #+#    #+#             */
-/*   Updated: 2024/04/10 10:58:22 by mmoussou         ###   ########.fr       */
+/*   Updated: 2024/04/11 14:35:37 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ typedef struct s_list
 
 t_list		*ft_lstnew(void *content);
 void		ft_lstadd_front(t_list **lst, t_list *new);
-int			ft_lstsize(t_list *lst);
+uint		ft_lstsize(t_list *lst);
 t_list		*ft_lstlast(t_list *lst);
 void		ft_lstadd_back(t_list **lst, t_list *new);
 void		ft_lstdelone(t_list *lst, void (*del)(void *));
@@ -120,7 +120,7 @@ typedef struct s_stack
 /* ------ STACK UTILS ------ */
 
 t_stack		*ft_stacknew(int content);
-int			ft_stacksize(t_stack *stack);
+uint		ft_stacksize(t_stack *stack);
 t_stack		*ft_stacklast(t_stack *stack);
 void		ft_stackadd_back(t_stack **stack, t_stack *new);
 void		ft_stackadd_front(t_stack **stack, t_stack *new);

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_stacksize.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmoussou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mmoussou <mmoussou@student.42angouleme.fr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 00:35:55 by mmoussou          #+#    #+#             */
-/*   Updated: 2024/01/18 00:39:58 by mmoussou         ###   ########.fr       */
+/*   Updated: 2024/04/11 14:35:24 by mmoussou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_stacksize(t_stack *stack)
+uint	ft_stacksize(t_stack *stack)
 {
-	int	i;
+	uint	i;
 
 	i = 0;
 	if (stack)
